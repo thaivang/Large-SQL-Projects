@@ -325,7 +325,7 @@ EXECUTE dbo.uspGETTotalBookbyPerson
 
 --7. For each book authored (or co-authored) by "Stephen King", retrieve the title and the number of copies owned by the library branch whose name is "Central".
 
-CREATE PROCEDURE dbo.uspGETTotalBookbyPerson 
+CREATE PROCEDURE dbo.uspGETTotalBookbyBranchName 
 AS
 SELECT BA.AuthorName, LB.BranchName, BO.Title, COUNT (BO.Title) AS 'Total Books'
 FROM Book_Loans AS BL
@@ -336,4 +336,4 @@ Where BA.AuthorName = 'Stephen King'
 AND LB.BranchName = 'Central'
 GROUP BY  BA.AuthorName, BO.Title, LB.BranchName;
 
-EXECUTE dbo.uspGETTotalBookbyPerson
+EXECUTE dbo.uspGETTotalBookbyBranchName
