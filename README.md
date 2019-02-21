@@ -1,3 +1,5 @@
-# SQL Project done at The Tech Academy
-# Purpose is to learn how to create a database with books and create procedures that queries for the questions provided along with the database.
-# Done with SQL
+# LMS project 
+Catalogue of authors, book titles, publishers, burrowers, and branch inventory.
+Create procedures that queries the database base on the questions provided.
+Languages used: 
+* SQL
